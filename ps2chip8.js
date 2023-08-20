@@ -629,7 +629,7 @@ class CPU {
     }
 }
 
-//const cpu = new CPU("ps2chip8/roms/Tetris.ch8");
+//const cpu = new CPU("ps2chip8/Tetris.ch8");
 const cpu = new CPU("ps2chip8/test_opcode.ch8");
 let new_pad = null;
 let old_pad = null;
@@ -660,7 +660,7 @@ while(true)
         cpu.Cycle();
     }
     
-    font.print(64, 300, "FPS: " + Screen.getFPS(10));
     cpu.Display();
+    font.print(64, 300, "FPS: " + Screen.getFPS(10));
     Screen.flip();
 }
